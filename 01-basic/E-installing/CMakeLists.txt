@@ -3,6 +3,18 @@ cmake_minimum_required(VERSION 3.5)
 project(cmake_examples_install)
 
 ############################################################
+# CMAKE_INSTALL_PREFIX
+############################################################
+
+message(STATUS "default CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT: ${CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT}")
+message(STATUS "default CMAKE_INSTALL_PREFIX: ${CMAKE_INSTALL_PREFIX}")
+
+if( CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT )
+  message(STATUS "Setting default CMAKE_INSTALL_PREFIX path to ${CMAKE_BINARY_DIR}/install")
+  set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE STRING "The path to use for make install" FORCE)
+endif()
+
+############################################################
 # Create a library
 ############################################################
 
