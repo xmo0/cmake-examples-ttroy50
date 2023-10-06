@@ -5,6 +5,10 @@ int main(int argc, char *argv[])
    std::cout << "Hello Compile Flags!" << std::endl;
 
    // only print if compile flag set
+#ifdef EX1
+  std::cout << "Hello Compile Flag EX1!" << std::endl;
+#endif
+
 #ifdef EX2
   std::cout << "Hello Compile Flag EX2!" << std::endl;
 #endif
